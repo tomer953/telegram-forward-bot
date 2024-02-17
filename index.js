@@ -14,6 +14,7 @@ bot.on('photo', async (ctx) => {
   await ctx.telegram.sendPhoto(PRIVATE_GROUP_ID, fileId, {
     caption: `${caption}Photo from ${getUsername(ctx.from)}`,
   });
+  await ctx.react('👍');
 });
 
 // Handler for non-compressed photos sent as documents
@@ -25,6 +26,7 @@ bot.on('document', async (ctx) => {
     await ctx.telegram.sendDocument(PRIVATE_GROUP_ID, fileId, {
       caption: `${caption}Non-compressed photo from ${getUsername(ctx.from)}`,
     });
+    await ctx.react('👍');
   }
 });
 
@@ -36,6 +38,7 @@ bot.on('video', async (ctx) => {
   await ctx.telegram.sendVideo(PRIVATE_GROUP_ID, fileId, {
     caption: `${caption}Video from ${getUsername(ctx.from)}`,
   });
+  await ctx.react('👍');
 });
 
 console.log('Bot launched');

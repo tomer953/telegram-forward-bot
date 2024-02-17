@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.4",
-    "telegraf": "^4.15.3"
+    "telegraf": "github:telegraf/telegraf#feat/api-7.0"
   }
 }
